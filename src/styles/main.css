@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: snow;
+  background-color: #28282f;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+}
+a {
+  text-decoration: none;
+}
+.main-homepage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "vid vid vid";
+  row-gap: 1rem;
+}
+.header {
+  display: flex;
+  color: snow;
+  justify-content: space-between;
+}
+.header .left-header {
+  display: flex;
+  align-items: center;
+}
+.btn-header {
+  color: white;
+  font-size: 2rem;
+  margin-right: 15px;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #28282f;
+}
+.filter {
+  padding: 10px;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+}
+.filter a {
+  margin: 5px;
+  width: max-content;
+  height: max-content;
+}
+.btn-filter {
+  color: white;
+  border: 1px solid white;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+.btn-filter:active {
+  color: #00a95a;
+  border: 1px solid #00a95a;
+  background-color: #29392e;
+}
+.videos {
+  padding: 0 5px;
+  grid-area: vid;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: flex-start;
+}
+.videox {
+  color: snow;
+  width: 15.5%;
+  margin: 10px 5px;
+  background-color: red;
+  height: 400px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  background: url(https://i.scdn.co/image/6fd6fdea63477f7bd0d34f485527f13c23fe8069);
+}
+.video-count {
+  display: flex;
+  align-self: flex-start;
+  margin: 10px;
+  font-size: 0.9rem;
+}
+.live-stat {
+  padding: 5px;
+  margin-right: 5px;
+  background-color: #ce0000;
+}
+.watch-count {
+  padding: 5px;
+  background-color: #29392e60;
+}
+.video-desc {
+  padding: 30px 10px 10px 10px;
+  width: 100%;
+  background: linear-gradient(rgba(63, 63, 63, 0.24), rgba(0, 0, 0, 0.822));
+}
+.store-name {
+  font-weight: 700;
+  margin-top: 10px;
+}
+@media screen and (max-width: 1024px) {
+  .videos {
+    justify-content: space-evenly;
+  }
+  .videox {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .videos {
+    justify-content: space-between;
+  }
+  .videox {
+    width: 45%;
+  }
+}
+
+/* Media query at 1024 to 3 vid and 580 to 2 vid */

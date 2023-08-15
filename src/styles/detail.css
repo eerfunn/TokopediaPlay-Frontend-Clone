@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+}
+.body-detail {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  grid-template-areas: "pb vm vm vm cb";
+  grid-auto-flow: column;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  color: black;
+}
+
+.products-bar {
+  grid-area: pb !important;
+  background-color: black;
+  min-height: 200px;
+  padding: 0 10px;
+  overflow: scroll;
+  height: 100vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.products-bar::-webkit-scrollbar {
+  display: none;
+}
+.product-item-list {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.product-item-list img {
+  max-width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.product-item-desc {
+  padding: 10px;
+}
+
+.product-item-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.product-item-price {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.video-main {
+  grid-area: vm !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+  padding: 0 10px;
+  background-color: black;
+}
+.video-main iframe {
+  width: 100%;
+  height: 50vh;
+}
+.comments-bar {
+  grid-area: cb !important;
+  min-height: 200px;
+  background-color: white;
+}
+.user-bar {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.user-bar img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+.user-container > .user-bar:first-child {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.459);
+}
+.comment-data-container {
+  display: flex;
+  flex-flow: wrap row;
+  overflow: hidden;
+}
+.username {
+  float: left;
+  font-weight: 500;
+}
+.post-description {
+  margin-bottom: 50px;
+}
+.post-description .username {
+  padding: 10px 5px 0 0;
+  align-items: center;
+}
+.post-description .user-bar {
+  float: left;
+  padding: 5px 5px 0 5px;
+}
+.desc-text {
+  padding: 10px;
+}
+.uploaded {
+  float: left;
+  color: gray;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+}
+.new-comment {
+  margin-top: 30px;
+}
+.new-comment .user-bar {
+  float: left;
+}
+.new-comment .username {
+  padding: 10px 5px 0 0;
+  align-items: center;
+}
+.new-comment .uploaded {
+  padding: 0 10px;
+}
+.input-comment {
+  background-color: white;
+  max-width: fit-content;
+  bottom: 0;
+  display: flex;
+  flex-flow: wrap;
+  padding: 10px;
+  position: fixed;
+  align-items: center;
+}
+.input-comment > label > input {
+  margin: 5px;
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.363);
+  padding: 5px;
+}
+.input-comment button {
+  width: 95%;
+  cursor: pointer;
+}
+.input-comment button:hover {
+  background-color: rgb(0, 204, 204);
+}
+.input-comment button:active {
+  background-color: rgb(0, 204, 204);
+  border: 3px solid aqua;
+}
+.submit-comment {
+  color: white;
+  background-color: rgb(0, 217, 255);
+  width: 80%;
+  height: 50px;
+  padding: 5px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.close-btn {
+  color: white;
+  z-index: 30;
+  position: absolute;
+  margin: 5px;
+}
+.input-comment-text {
+  margin-left: 55px;
+}
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 0;
+  }
+  .body-detail {
+    display: flex;
+
+    flex-direction: column;
+    background-color: black;
+  }
+  .input-comment {
+    background-color: white;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row wrap;
+    width: 100vw;
+    padding: 5px;
+  }
+
+  .products-bar {
+    display: flex;
+    max-height: 300px;
+    padding: 0 10px;
+    overflow: scroll;
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+  }
+  .product-item-list {
+    margin-right: 10px;
+    width: 150px;
+  }
+  .product-item-price {
+    font-size: 0.9rem;
+  }
+  .video-main {
+    margin-top: 4px;
+    position: sticky;
+    width: 100%;
+  }
+  .comments-bar {
+    margin-top: 2%;
+    margin-bottom: 75px;
+    padding-bottom: 10px;
+    z-index: 3;
+    background-color: white;
+  }
+}
