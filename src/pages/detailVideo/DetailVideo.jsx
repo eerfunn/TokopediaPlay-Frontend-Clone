@@ -13,14 +13,14 @@ const DetailVideo = () => {
     const getVideo = async () => {
       await axios
         .create({
-          baseURL: `http://localhost:5000/api/v1/video/${id}`,
+          baseURL: `${process.env.REACT_APP_BACKEND_URL}/api/v1/video/${id}`,
         })
         .get()
         .then((res) => {
           setVideoData(res.data.data);
           axios
             .create({
-              baseURL: `http://localhost:5000/api/v1/user/${res.data.data.userId}`,
+              baseURL: `${process.env.REACT_APP_BACKEND_URL}/api/v1/user/${res.data.data.userId}`,
             })
             .get()
             .then((res) => {

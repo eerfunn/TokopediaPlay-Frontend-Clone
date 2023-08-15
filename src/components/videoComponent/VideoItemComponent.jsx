@@ -7,7 +7,7 @@ const VideoItemComponent = ({ key, id, stat, count, title, store }) => {
   useEffect(() => {
     axios
       .create({
-        baseURL: `http://localhost:5000/api/v1/user/${store}`,
+        baseURL: `${process.env.REACT_APP_BACKEND_URL}/api/v1/user/${store}`,
       })
       .get()
       .then((res) => {

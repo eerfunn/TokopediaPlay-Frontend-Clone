@@ -4,7 +4,7 @@ import VideoItemComponent from "./VideoItemComponent";
 
 const VideoComponent = (id) => {
   const client = axios.create({
-    baseURL: "http://localhost:5000/api/v1/videos",
+    baseURL: `${process.env.REACT_APP_BACKEND_URL}/api/v1/videos`,
   });
   const [videos, setVideos] = useState([]);
   useEffect(() => {

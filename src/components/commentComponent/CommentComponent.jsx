@@ -9,7 +9,7 @@ const CommentComponent = ({ userId, title }) => {
     comment: "",
   });
   const commentList = axios.create({
-    baseURL: `http://localhost:5000/api/v1/video/${id}/comments`,
+    baseURL: `${process.env.REACT_APP_BACKEND_URL}/api/v1/video/${id}/comments`,
   });
 
   const [videoCommentData, setVideoCommentData] = useState([]);
@@ -36,7 +36,10 @@ const CommentComponent = ({ userId, title }) => {
     };
     console.log("Comment Post: ", commentData);
     axios
-      .post("http://localhost:5000/api/v1/comment/add/", commentData)
+      .post(
+        `${process.env.REACT_APP_BACKEND_URL}/api/v1/comment/add/`,
+        commentData
+      )
       .then((res) => {
         let newData = res.data.data;
         newData.userId[0] = {};
