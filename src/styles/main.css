@@ -34,6 +34,10 @@ a {
   font-size: 2rem;
   margin-right: 15px;
 }
+.header-btn {
+  margin: 10px 10px 0 10px;
+  max-width: 30px;
+}
 .sticky {
   position: sticky;
   top: 0;

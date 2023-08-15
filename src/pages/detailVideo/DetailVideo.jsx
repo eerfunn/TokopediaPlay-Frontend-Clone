@@ -5,6 +5,8 @@ import ProductComponent from "../../components/productComponent/ProductComponent
 import EmbedYouTubeComponent from "../../components/embedYouTubeComponent/EmbedYouTubeComponent";
 import CommentComponent from "../../components/commentComponent/CommentComponent";
 import { Link, useParams } from "react-router-dom";
+import closeButton from "../../images/icons8-close-30.png";
+
 const DetailVideo = () => {
   const { id } = useParams();
   const [videoData, setVideoData] = useState([]);
@@ -37,7 +39,14 @@ const DetailVideo = () => {
     <>
       <div className="body-detail">
         <Link to={"/"} className="close-btn">
-          <h1> &#10006;</h1>
+          <h1>
+            {" "}
+            <img
+              src={closeButton}
+              alt="close detail page"
+              className="header-btn"
+            />
+          </h1>
         </Link>
         <ProductComponent productData={videoData.products} />
         <EmbedYouTubeComponent videoId={videoData.videoId} />
