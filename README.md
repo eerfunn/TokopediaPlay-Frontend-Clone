@@ -12,7 +12,7 @@ A final project from Generasi GIGIH 3.0, make a clone from `tokopedia.com/play` 
 
 ### Frontend Deployment
 
-[Frontend Deployment](https://tokopediaplayclone.vercel.app/detail/YSBPlQCiPao)
+[Frontend Deployment](https://tokopediaplayclone.vercel.app)
 
 ### Backend Repository
 
